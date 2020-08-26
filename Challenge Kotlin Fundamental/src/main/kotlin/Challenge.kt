@@ -36,38 +36,37 @@ fun menu(){
         }
     }
 }
-fun kerucut(){
-    print("Masukan Tinggi Kerucut : ")
-    val tinggi:Double = input.nextDouble()
-    print("Masukan Jari-jari Kerucut : ")
-    val jari:Double = input.nextDouble()
-    val v = hitungKerucut(tinggi.toDouble(),jari.toDouble())
-    val volume : Double
-    volume = v.toDouble()
-    println("Volume dari balok yang mempunyai panjang $tinggi, lebar $jari, dam tinggi $tinggi ini adalah $volume")
-}
-fun hitungKerucut(t: Double,r: Double):Double{
-    val v = (0.33333) * Math.PI * (r * r) * t
-    return v.toDouble()
+fun kerucut() {
+    println("================================");
+    print("Masukan Tinggi Kerucut : ");
+    val tinggi: Double = input.nextDouble();
+    print("Masukan Jari-jari Kerucut : ");
+    val jari: Double = input.nextDouble();
+
+    val v: Double = (0.33333) * Math.PI * (jari * jari) * tinggi;
+    println("================================");
+    print("Volume dari kerucut adalah ");
+    System.out.printf("%.2f", v);
+    println()
+    println("================================");
+    menu()
 
 }
-fun tabung(){
-    println("===========================");
+fun tabung() {
+    println("================================");
     print("Masukan Tinggi tabung : ");
-    var tinggi:Double? = null
+    var tinggi: Double? = null
     tinggi = input.nextDouble();
     print("Masukan jari-jari tabung: ");
-    var jari:Double? = null
+    var jari: Double? = null
     jari = input.nextDouble();
-    val v = hitungTabung(tinggi.toDouble(),jari.toDouble())
-    val volume : Double
-    volume = v.toDouble()
-    println("Volume dari balok yang mempunyai panjang $tinggi, lebar $jari, dam tinggi $tinggi ini adalah $volume")
+    val v = Math.PI * jari * jari * tinggi;
+    println("================================");
+    print("Volume dari tabung adalah ")
+    System.out.printf("%.2f", v);
+    println()
 
 
-}
-fun hitungTabung(t: Double, r: Double):Double{
-    val v = Math.PI * r * r * t
-    return v.toDouble()
 
 }
+
